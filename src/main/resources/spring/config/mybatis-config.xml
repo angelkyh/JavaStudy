@@ -4,13 +4,15 @@
 <configuration>
   <properties resource="spring/config/db.properties"/>
 
+<!--
   <settings>
   	<setting name="jdbcTypeForNull" value="NULL" />
   	<setting name="defaultFetchSize" value="100" />
   	<setting name="cacheEnabled" value="true" />
 	<setting name="mapUnderscoreToCamelCase" value="true" />
   </settings>
-
+  -->
+  
   <typeAliases>
     <package name="com.example.demo" />    
   </typeAliases>
