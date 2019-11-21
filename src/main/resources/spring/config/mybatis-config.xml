@@ -9,6 +9,7 @@
   	<setting name="defaultFetchSize" value="100" />
   	<setting name="cacheEnabled" value="true" />
 	<setting name="mapUnderscoreToCamelCase" value="true" />
+	<setting name="logImpl" value="SLF4J" />
   </settings>
 
   <typeAliases>
