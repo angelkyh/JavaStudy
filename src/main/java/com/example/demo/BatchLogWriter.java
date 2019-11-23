@@ -16,7 +16,7 @@ public class BatchLogWriter {
 
 		String logFile = "C:/Temp/" + stepExecution.getJobExecution().getJobInstance().getJobName()  + ".log";
 
-		// 로그를 출력한다.
+		// 로그를 출력한다. 
 		try {
 		    FileOutputStream fos = new FileOutputStream(logFile, true);
 		    PrintWriter pw = new PrintWriter(fos);
