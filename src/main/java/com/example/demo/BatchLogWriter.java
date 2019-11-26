@@ -23,8 +23,8 @@ public class BatchLogWriter {
 
 		    pw.printf("[%s] Read   건수[%05d]\n", sysDate, stepExecution.getReadCount());
 		    pw.printf("[%s] Write  건수[%05d]\n", sysDate, stepExecution.getWriteCount());
-		    pw.printf("[%s] Commit 건수[%05d]\n", sysDate, stepExecution.getCommitCount());
-		    pw.printf("[%s] RSkip  건수[%05d]\n", sysDate, stepExecution.getReadSkipCount());
+		   // KYH pw.printf("[%s] Commit 건수[%05d]\n", sysDate, stepExecution.getCommitCount());
+		   // KYH pw.printf("[%s] RSkip  건수[%05d]\n", sysDate, stepExecution.getReadSkipCount());
 		    pw.printf("[%s] WSkip  건수[%05d]\n", sysDate, stepExecution.getWriteSkipCount());
 		    pw.flush();	
 		    pw.close();

@@ -10,10 +10,5 @@ public class Example01 {
 	    System.out.println("소스트리 KYH SUCCESS 9999 !!!");
 	    System.out.println("이클립스 KYH SUCCESS 8888 !!!");
 	    
-	    System.out.println("소스트리 마지막  SUCCESS 777 !!!");
-	     
-	     System.out.println("FETCH 테스트  SUCCESS 90000 !!!");
-	     
-	     System.out.println("깃 테스트 FETCH 테스트  SUCCESS 80000 !!!");
 	}
 }
