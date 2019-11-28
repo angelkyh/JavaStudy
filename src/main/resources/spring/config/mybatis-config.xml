@@ -27,6 +27,7 @@
     </environment>
   </environments>
 
+<!-- KYH 테스트 2 -->
   <mappers>
     <mapper resource="sql/demo/sql-EmpList.xml"/>
   </mappers>
