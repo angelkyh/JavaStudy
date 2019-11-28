@@ -16,9 +16,8 @@
 
     <tx:annotation-driven />
     
-    <mybatis:scan base-package="com.example.demo.mapper" />
-    
-<!-- <bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />  -->	
+    <mybatis:scan base-package="com.example.demo" />
+
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 	    <property name="dataSource" ref="dataSource" />
 	</bean>
@@ -33,10 +32,10 @@
 	<bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
 		<property name="jobRepository" ref="jobRepository" />
 	</bean>
-	
+  <!--
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 	    <property name="dataSource" ref="dataSource" />
 	    <property name="configLocation" value="classpath:/mybatis-config.xml" />
 	</bean>
-	
+  -->		
 </beans>

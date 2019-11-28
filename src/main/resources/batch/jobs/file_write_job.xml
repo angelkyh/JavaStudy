@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch" 
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch
+		http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+	<batch:job id="email_file_write_job">
+		<batch:step id="step1">
+			<batch:tasklet ref="EmailFileWriteTasklet" />
+		</batch:step>
+	</batch:job>
+
+	<bean id="EmailFileWriteTasklet" class="com.example.demo.tasklet.EmailFileWriteTasklet" />
+
+</beans>

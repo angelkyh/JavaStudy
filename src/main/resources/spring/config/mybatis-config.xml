@@ -27,4 +27,7 @@
     </environment>
   </environments>
 
+  <mappers>
+    <mapper resource="sql/demo/sql-EmpList.xml"/>
+  </mappers>
 </configuration>
