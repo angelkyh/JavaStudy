@@ -10,12 +10,12 @@
 
     <import resource="../config/context.xml" />
 
-	<batch:job id="email_file_write_job">
+	<batch:job id="EmpInfoFileCreateJob">
 		<batch:step id="step1">
-			<batch:tasklet ref="EmailFileWriteTasklet" />
+			<batch:tasklet ref="EmpInfoFileCreateTasklet" />
 		</batch:step>
 	</batch:job>
 
-	<bean id="EmailFileWriteTasklet" class="com.example.demo.tasklet.EmailFileWriteTasklet" />
+	<bean id="EmpInfoFileCreateTasklet" class="com.example.demo.tasklet.EmpInfoFileCreateTasklet" />
 
 </beans>

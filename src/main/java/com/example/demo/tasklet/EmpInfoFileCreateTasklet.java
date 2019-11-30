@@ -11,7 +11,7 @@ import org.springframework.batch.repeat.RepeatStatus;
 
 import com.example.demo.dto.EmpInfoDao;
 
-public class EmailFileWriteTasklet implements Tasklet {
+public class EmpInfoFileCreateTasklet implements Tasklet {
 
 	@Override
 	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
@@ -21,7 +21,7 @@ public class EmailFileWriteTasklet implements Tasklet {
 
 		// 사원 DAO 객체를 생성한다.
 		EmpInfoDao empDao = new EmpInfoDao();
-					
+				
 		try {
 			Reader reader = Resources.getResourceAsReader(conf);
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
@@ -32,7 +32,6 @@ public class EmailFileWriteTasklet implements Tasklet {
 			if (resultVal != 0) {
 				System.exit(resultVal);	
 			}
-
 		} catch(Throwable e) {
 		    e.printStackTrace();
 		    System.out.println("프로그램이 수행 실패!!!");

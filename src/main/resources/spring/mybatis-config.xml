@@ -2,7 +2,7 @@
 <!DOCTYPE configuration  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-  <properties resource="../config/db.properties"/>
+  <properties resource="config/db.properties"/>
 
   <settings>
   	<setting name="jdbcTypeForNull" value="NULL" />
@@ -12,9 +12,9 @@
   </settings>
 
   <typeAliases>
-    <package name="com.example.demo" />    
+    <package name="com.example.demo" /> 
   </typeAliases>
-  
+
   <environments default="development">
     <environment id="development">
       <transactionManager type="JDBC"/>
@@ -26,9 +26,8 @@
       </dataSource>
     </environment>
   </environments>
-
-<!-- KYH 테스트 2 -->
+  
   <mappers>
-    <mapper resource="sql/demo/sql-EmpList.xml"/>
+    <mapper resource="sql/batch/sql-EmpList.xml"/>
   </mappers>
 </configuration>

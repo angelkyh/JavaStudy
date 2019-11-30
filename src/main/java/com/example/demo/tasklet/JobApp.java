@@ -3,6 +3,7 @@ package com.example.demo.tasklet;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameters;
+import org.springframework.batch.core.JobParametersBuilder;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,25 +19,23 @@ public class JobApp {
 	
 		String[] springConfig  = 
 			{ "config/database.xml",
-			  "config/context.xml",
 			  "jobs/file_write_job.xml" 
 			};
-		
-		ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
 
+		ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
-		Job job = (Job) context.getBean("email_file_write_job");
+		Job job = (Job) context.getBean("EmpInfoFileCreateJob");
 
 		try {
-
-			JobExecution execution = jobLauncher.run(job, new JobParameters());
+			JobParameters param = new JobParametersBuilder().addLong("time",System.currentTimeMillis()).toJobParameters();
+			JobExecution execution = jobLauncher.run(job, param);
 			System.out.println("Exit Status : " + execution.getStatus());
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		System.out.println("Done");
-
+		System.out.println("실행성공");
 	}
+	
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+	
 <mapper namespace="EmpInfo">
-    <select id="selectEmpList" parameterType="String" resultType="com.example.demo.dto.empInfoDto">
+    <select id="selectEmpList" parameterType="String" resultType="com.example.demo.dto.EmpInfoDto">
 	    <![CDATA[
 		    SELECT a.emp_no
 		         , a.emp_nm
@@ -23,7 +23,7 @@
 	   ]]>
 	</select>
 	
-	<insert id="insertEmpList" parameterType="com.example.demo.dto.empInfoDto">
+	<insert id="insertEmpList" parameterType="com.example.demo.dto.EmpInfoDto">
 	    <![CDATA[
 	        INSERT INTO
 	             ( a.emp_no

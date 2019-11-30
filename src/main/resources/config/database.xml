@@ -13,11 +13,6 @@
 		<property name="url" value="jdbc:mysql://localhost:3306/studydb?serverTimezone=Asia/Seoul" />
 		<property name="username" value="study" />
 		<property name="password" value="study" />
-	</bean>
-	
-<!-- KYH 테스트
-     2019.11.30 브랜치 테스트
-	<bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
--->
- 	
+   </bean>
+
 </beans>

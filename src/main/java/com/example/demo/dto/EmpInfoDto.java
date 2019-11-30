@@ -16,4 +16,5 @@ public class EmpInfoDto {
 	private Date   regDttm;
 	private String lastModUserId;
 	private Date   lastModDttm;
+	private String jobId;
 }
