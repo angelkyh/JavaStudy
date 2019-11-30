@@ -17,7 +17,7 @@ public class EmailFileWriteTasklet implements Tasklet {
 	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 
 		int resultVal = 0;
-		String conf = "spring/config/mybatis-config.xml";
+		String conf = "spring/mybatis-config.xml";
 
 		// 사원 DAO 객체를 생성한다.
 		EmpInfoDao empDao = new EmpInfoDao();

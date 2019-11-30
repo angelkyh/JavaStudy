@@ -17,13 +17,13 @@ public class JobApp {
 	private void run() {
 	
 		String[] springConfig  = 
-			{ "spring/config/database.xml",
-			  "spring/config/context.xml",
-			  "batch/jobs/file_write_job.xml" 
+			{ "config/database.xml",
+			  "config/context.xml",
+			  "jobs/file_write_job.xml" 
 			};
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
-		
+
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
 		Job job = (Job) context.getBean("email_file_write_job");
 
