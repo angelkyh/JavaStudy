@@ -12,9 +12,9 @@ public class EmpInfoDto {
 	private String deptNm;
 	private String gender;
 	private String retireDt;
-	private String regUserId;
-	private Date   regDttm;
+	private String regiUserId;
+	private String regiDttm;
 	private String lastModUserId;
-	private Date   lastModDttm;
+	private String lastModDttm;
 	private String jobId;
 }
