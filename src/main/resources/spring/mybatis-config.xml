@@ -15,6 +15,7 @@
     <package name="com.example.demo" /> 
   </typeAliases>
 
+<!--
   <environments default="development">
     <environment id="development">
       <transactionManager type="JDBC"/>
@@ -26,8 +27,22 @@
       </dataSource>
     </environment>
   </environments>
-  
+-->
+
+  <!-- sqlSession 설정 -->
+  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="doDataSource"/>
+        <property name="configLocation" value="/conf/spring/doSqlMapConfig.xml" />
+        <property name="mapperLocations" value="/sql/batch/sql-*.xml" />
+ </bean>
+
+  <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+      <constructor-arg index="0" ref="sqlSessionFactory" />
+      <constructor-arg index="1" value="BATCH" />
+  </bean>
+<!--
   <mappers>
     <mapper resource="sql/batch/sql-EmpList.xml"/>
   </mappers>
+-->
 </configuration>

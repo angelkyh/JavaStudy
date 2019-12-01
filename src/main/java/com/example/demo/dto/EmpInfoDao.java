@@ -9,11 +9,17 @@ import org.apache.ibatis.session.SqlSessionFactory;
 
 public class EmpInfoDao {
 
-	SqlSessionFactory sqlSessionFactory;
+     private SqlSession sqlSession;
+
+     public void setSqlSession(SqlSession sqlSession) {
+       this.sqlSession = sqlSession;
+     }
+  
+	//SqlSessionFactory sqlSessionFactory;
 	
-	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
-		this.sqlSessionFactory = sqlSessionFactory;
-	}
+	//public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
+	//	this.sqlSessionFactory = sqlSessionFactory;
+	//}
 	
 	public int selectEmpList() {
 		SqlSession sqlSession = sqlSessionFactory.openSession();

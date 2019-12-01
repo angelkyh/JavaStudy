@@ -23,9 +23,9 @@ public class EmpInfoFileCreateTasklet implements Tasklet {
 		EmpInfoDao empDao = new EmpInfoDao();
 				
 		try {
-			Reader reader = Resources.getResourceAsReader(conf);
-			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-			empDao.setSqlSessionFactory(sqlSessionFactory);
+			//Reader reader = Resources.getResourceAsReader(conf);
+			//SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
+			//empDao.setSqlSessionFactory(sqlSessionFactory);
 
 			/* 사원 목록을 조회한다. */
 			resultVal = empDao.selectEmpList();
