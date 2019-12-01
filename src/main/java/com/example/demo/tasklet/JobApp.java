@@ -17,10 +17,7 @@ public class JobApp {
 
 	private void run() {
 	
-		String[] springConfig  = 
-			{ "config/database.xml",
-			  "jobs/file_write_job.xml" 
-			};
+		String springConfig =  "jobs/file_write_job.xml";
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(springConfig);
 		JobLauncher jobLauncher = (JobLauncher) context.getBean("jobLauncher");
