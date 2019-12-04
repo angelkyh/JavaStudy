@@ -19,7 +19,7 @@ public class EmpInfoDao {
 		PrintWriter pw = null;
 
 		ApplicationContext context = new ClassPathXmlApplicationContext(conf);
-		SqlSession sqlSession = (SqlSession) context.getBean("sqlSession");
+		sqlSession = (SqlSession) context.getBean("sqlSession");
 
 		try {
 			pw = new PrintWriter(new FileWriter(fileName));
